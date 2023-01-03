@@ -220,6 +220,7 @@ hr:before,
   font-family: 'Font Awesome 6 Free';
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .cardHover,
@@ -3605,7 +3606,7 @@ h1.page-title+.tag-cloud-list {
 #page-header {
   position: relative;
   width: 100%;
-  background-image: url(./linmeng/images/碧蓝档案_课室.jpg);
+  background-image: url(../linmeng/images/碧蓝档案_课室.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3620,7 +3621,6 @@ h1.page-title+.tag-cloud-list {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url(./linmeng/images/碧蓝档案_课室.jpg);
   content: '';
 }
 
