@@ -3735,6 +3735,8 @@ h1.page-title+.tag-cloud-list {
 }
 
 #page-header.post-bg:before {
+  width: 100vw;
+  background-size: 50%;
   background-image: url(../linmeng/images/碧蓝档案_课室.jpg);
 }
 
