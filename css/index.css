@@ -3620,7 +3620,7 @@ h1.page-title+.tag-cloud-list {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-image: url(./linmeng/images/碧蓝档案_课室.jpg);
   content: '';
 }
 
