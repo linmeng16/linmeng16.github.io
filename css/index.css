@@ -3279,7 +3279,9 @@ h1.page-title + .tag-cloud-list {
   }
 }
 #page-header.post-bg:before {
-  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  background-size: 50%;
+  background-image: url(../linmeng/images/碧蓝档案_隧道.jpg);
 }
 #page-header #post-info {
   position: absolute;
