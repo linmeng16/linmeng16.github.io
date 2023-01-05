@@ -78,8 +78,8 @@
 :root {
     --trans-light: rgba(0, 255, 229, 0.2);
     --trans-dark: rgba(25, 25, 25, 0.88);
-    --border-style: 1px solid rgb(169, 169, 169);
-    --backdrop-filter: blur(5px) saturate(150%);
+    --border-style: 1px solid rgba(150, 167, 255, 0.3);
+    --backdrop-filter: blur(1px) saturate(100%);
 }
 
 /* 首页文章卡片 */
