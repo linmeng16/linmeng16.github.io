@@ -23,3 +23,6 @@ function btn_display_none() {
     document.getElementById("jin_12_btn").style.display = "none";
 }
 
+
+
+

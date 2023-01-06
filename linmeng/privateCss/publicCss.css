@@ -43,3 +43,11 @@ body {
     min-width: 800px;
     min-height: 600px;
 }
+
+.hitokoto {
+    z-index: 108;
+    position: absolute;
+    bottom: 50%;
+    font-size: xx-large;
+    color: rgb(61, 61, 61);
+}

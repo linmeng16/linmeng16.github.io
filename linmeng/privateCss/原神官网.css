@@ -774,3 +774,7 @@ label {
     height: 18px;
     transition: all 0.5s;
 }
+
+.video_img{
+    width:100vw;
+}
