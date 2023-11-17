@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>琳梦大人的个人网站</title>
+    <script src="./js/audio.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./privateCss/publicCss.css">
+    <link rel="stylesheet" href="./privateCss/publicFooterCss.css">
+    <link rel="stylesheet" href="./privateCss/publicHreadCss.css">
+    <link rel="stylesheet" href="./privateCss/原神官网.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script> -->
+
+    <!--一言-->
+    <script>
+        fetch('https://v1.hitokoto.cn')
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (data) {
+                var hitokoto = document.getElementById('hitokoto');
+                hitokoto.innerText = data.hitokoto;
+            })
+            .catch(function (err) {
+                console.error(err);
+            })
+    </script>
+</head>
+
+<body style="background-color: grey;">
+    <!-- 头部 -->
+    <header class="header">
+        <!-- 音乐&按钮 -->
+        <div class="audios">
+            <audio id="music2" src="./video/背景音乐.mp3" loop="loop" autoplay="autoplay"></audio>
+            <img class="music" src="./images/音乐开启.png" id="music_btn2">
+            <!-- <input type="checkbox" id="audio">
+            <label for="audio" class="audios">
+            </label>
+            <img src="images/音乐开启.png" class="audioYes">
+            <img src="./images/音乐关闭.png" class="audioNo">
+            <embed src="./video/背景音乐.mp3" loop="true" autostart="true" id="embed"> -->
+        </div>
+        <div class="logo">
+
+        </div>
+        <nav class="header_nav">
+            <div class="header_textNav">
+                <a href="./linmeng.html" class="header_textPublic header_textChecked">
+                    首&nbsp;页
+                </a>
+                <a href="https://linmeng16.github.io/index.html" class="header_textPublic">
+                    新&nbsp;闻
+                </a>
+                <a href="./iota/mian.html" class="header_textPublic">
+                    角&nbsp;色
+                </a>
+                <a href="./私のウェブサイト/html/index.html" class="header_textPublic">
+                    世&nbsp;界
+                </a>
+                <a href="./love_games/index.html" class="header_textPublic">
+                    漫&nbsp;画
+                </a>
+                <a href="https://www.fomal.cc" class="header_textPublic">
+                    社&nbsp;区
+                </a>
+                <div class="header_navs">
+
+                </div>
+            </div>
+        </nav>
+        <div class="header_right">
+            <a href="#" class="header_cz">
+                <p style="font-size: 17px;">
+                    成长关爱系统
+                </p>
+                <img src="./images/成长关爱.png" class="header_czimg">
+            </a>
+            <div class="header_login">
+                <input type="checkbox" style="display: none;" id="login">
+                <label for="login" class="login_btn">
+                    <span class="dr">
+                        登录
+                    </span>
+                    <img src="./images/登入.png" class="header_login_img">
+                </label>
+                <div class="mhy_login">
+                    <div style="width: 450px;">
+                        <div class="mhy_account">
+                            <img src="./images/琳梦.png" class="mhy_logo">
+                            <label for="login" class="mhy_account_out">
+                                <img src="./images/关闭.png">
+                            </label>
+                            <input type="radio" name="account" style="display: none;" id="account_one" checked>
+                            <input type="radio" name="account" style="display: none;" id="account_two">
+                            <div class="account">
+                                <label for="account_one">
+                                    验证码登入
+                                </label>
+                                <label for="account_two">
+                                    密码登入
+                                </label>
+                            </div>
+                            <div class="login_one">
+                                <div class="mhy_input" style="margin-top: 35px;">
+                                    <div class="mhy_input_account">
+                                        <input type="text" placeholder="手机号注册/登入">
+                                    </div>
+                                </div>
+                                <div class="mhy_input">
+                                    <div class="mhy_input_account">
+                                        <input type="text" placeholder="验证码">
+                                        <div class="mhy_input_yzm">
+                                            获取验证码
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="mhy_login_btn">
+                                    登入
+                                </button>
+                                <div class="mhy_help mhy_login_public">
+                                    <span>
+                                        登入遇到问题?
+                                    </span>
+                                    <span>
+                                        立即注册
+                                    </span>
+                                </div>
+                                <div class="mhy_login_public">
+                                    <span style="color: black;">
+                                        未注册的手机验证后将自动登录。注册/登录即代表您同意并遵守
+                                    </span>
+                                    <span>
+                                        《琳梦的倾述馆用户服务协议》
+                                    </span>
+                                    <span>
+                                        《琳梦的倾述馆用户个人信息及隐私保护政策》
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="login_two">
+                                <div class="mhy_input" style="margin-top: 35px;">
+                                    <div class="mhy_input_account">
+                                        <input type="text" placeholder="手机号/邮箱">
+                                    </div>
+                                </div>
+                                <div class="mhy_input">
+                                    <div class="mhy_input_account">
+                                        <input type="text" placeholder="密码">
+                                    </div>
+                                </div>
+                                <button class="mhy_login_btn">
+                                    登入
+                                </button>
+                                <div class="mhy_help mhy_login_public">
+                                    <span>
+                                        登入遇到问题?
+                                    </span>
+                                    <span>
+                                        立即注册
+                                    </span>
+                                </div>
+                                <div class="mhy_login_public">
+                                    <span style="color: black;">
+                                        登录即代表您同意并遵守
+                                    </span>
+                                    <span>
+                                        《琳梦的倾述馆用户服务协议》
+                                    </span>
+                                    <span>
+                                        《琳梦的倾述馆用户个人信息及隐私保护政策》
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 12+提示弹窗 -->
+    <div class="jin_12_btn" id="jin_12_btn">
+        <div class="jin_12_btn_images">
+            <label>
+                <div class="jin_12_btn_dle" onclick="btn_display_none()">
+            </label>
+
+
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- 主体内容 -->
+
+    <section class="home">
+
+        <div class="video_body">
+
+            <div class="video">
+
+                <img src="./images/碧蓝档案_大厦.jpg" class="video_img">
+                <!-- <video src="video/原神.mp4" style="width: 100vw;" loop="loop" muted="muted" autoplay></video> -->
+
+            </div>
+
+
+            <div class="video_body_nr">
+                <p id="hitokoto" class="hitokoto">琳梦的CPU炸掉了</p>
+                <div class="video_button">
+                    <input type="checkbox" style="display: none;" id="conductVideo">
+                    <label for="conductVideo" class="conductButton">
+                        <div class="buttonStart">
+
+                        </div>
+                    </label>
+                    <div class="videos">
+                        <label for="conductVideo" class="offbutton">
+
+                        </label>
+                        <video src="./video/宣传视频.mp4" muted="muted" controls="controls" autoplay style="width: 100%;">
+
+                        </video>
+                    </div>
+                    <div class="shade">
+
+                    </div>
+                </div>
+                <div class="ys_download">
+                    <div class="download_way">
+                        <div class="download_one">
+                            <!-- <img src="./images/琳梦头像.jpg" class="ys_download_pm"> -->
+                            <img src="./images/琳梦的收款码.png" class="ys_download_ewm">
+                            <h1>赞助码</h1>
+
+                        </div>
+
+
+                        <!-- <div class="download_two">
+                            <div class="download_ps4">
+                                <img src="./images/下载方式1.png">
+                            </div>
+                            <div class="download_iphone">
+                                <img src="./images/下载方式3.png">
+                            </div>
+                        </div>
+                        <div class="download_three">
+                            <div class="download_tap">
+                                <img src="./images/下载方式2.png">
+                            </div>
+                            <div class="download_android">
+                                <img src="./images/下载方式4.png">
+                            </div>
+                        </div> -->
+                        <!-- <div class="download_four">
+                            <img src="./images/下载方式5.png">
+                        </div> -->
+                    </div>
+                </div>
+                <div class="glide_cartoon">
+                    <div>
+                        <img src="./images/下滑动画.png">
+                    </div>
+                    <div>
+                        <img src="./images/下滑动画.png">
+                    </div>
+                    <div>
+                        <img src="./images/下滑动画.png">
+                    </div>
+                </div>
+                <label>
+                    <img class="jin_12" src="./images/12+.png" onclick="btn_display_block()">
+                </label>
+                <!-- 适龄提示弹窗
+                <div id="mymoda1" class="moda1">
+                    关闭适龄提示弹窗
+                   <span class="close" onclick="document.getElementById(mymoda1).style.display=none;">&times;</span>
+                   弹出内容
+                    <img class="moda1-content" id="img01">
+                    文本描述
+                    <div id="caption"></div>
+
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- 新闻资讯 -->
+    <section class="news">
+        <h3 class="news_text">
+            新闻资讯
+        </h3>
+        <div class="shouye_new_neiron">
+            <div class="new_lunbo">
+                <input type="radio" name="lunbo" id="lbt_1" checked>
+                <label for="lbt_1">
+
+                </label>
+
+                <input type="radio" name="lunbo" id="lbt_2">
+                <label for="lbt_2">
+
+                </label>
+
+                <input type="radio" name="lunbo" id="lbt_3">
+                <label for="lbt_3">
+
+                </label>
+
+                <input type="radio" name="lunbo" id="lbt_4">
+                <label for="lbt_4">
+
+                </label>
+                <ul class="clearfix">
+                    <li>
+                        <img src="./images/轮播图1 (1).jpg">
+                    </li>
+                    <li>
+                        <img src="./images/轮播图1 (2).jpg">
+                    </li>
+                    <li>
+                        <img src="./images/轮播图1 (3).jpg">
+                    </li>
+                    <li>
+                        <img src="./images/轮播图1 (4).jpg">
+                    </li>
+                </ul>
+            </div>
+            <div class="new_you_neiron">
+                <input type="radio" name="daohan" id="max_new" checked>
+                <label for="max_new">
+                    最新
+                </label>
+                <input type="radio" name="daohan" id="new">
+                <label for="new">
+                    新闻
+                </label>
+                <input type="radio" name="daohan" id="gong_gao">
+                <label for="gong_gao">
+                    公告
+                </label>
+                <input type="radio" name="daohan" id="active">
+                <label for="active">
+                    活动
+                </label>
+                <ul class="new_you_bottom">
+                    <li>
+                        <div>
+                            <p>
+                                理性的人追求的并非快乐,而只是避免痛苦
+
+                            </p>
+                            <p>
+                                2022/12/22
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                很多事只是最初看起来有意义,但经过多次重复就慢慢失去了意义
+                            </p>
+                            <p>
+                                2022/12/22
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                不管是怎样的回忆,都是我们活过的人生
+                            </p>
+                            <p>
+                                2022/12/22
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                你现在的气质里,藏着你走过的路,读过的书和爱过的人
+                            </p>
+                            <p>
+                                2022/12/22
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                没有BUG的代码是不完美的
+                            </p>
+                            <p>
+                                2022/12/22
+                            </p>
+                        </div>
+                    </li>
+                    <p>
+                        查看全部资讯
+                    </p>
+                </ul>
+                <ul class="new_you_bottom">
+                    <li>
+                        <div>
+                            <p>
+                                不要因为结束而哭泣,微笑吧,为你曾经拥有
+                            </p>
+                            <p>
+                                2022/12/24
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                你是否会等待着我？我还想变的更加美好...
+                            </p>
+                            <p>
+                                2022/12/24
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                有钱人终成眷属,没钱人亲眼目睹
+                            </p>
+                            <p>
+                                2022/12/24
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                每个人的心里,都有一个忘不掉,却无法拥抱珍惜的人
+                            </p>
+                            <p>
+                                2022/12/24
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                活着就是为了改变世界
+                            </p>
+                            <p>
+                                2022/12/24
+                            </p>
+                        </div>
+                    </li>
+                    <p>
+                        查看全部资讯
+                    </p>
+                </ul>
+                <ul class="new_you_bottom">
+                    <li>
+                        <div>
+                            <p>
+                                《原神》祈愿概率公示
+                            </p>
+                            <p>
+
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                《原神》「千朵玫瑰带来的黎明」3.0版本更新维护预告
+                            </p>
+                            <p>
+                                2022/08/22
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                《原神》2.5版本「薄樱初绽时」更新通知
+                            </p>
+                            <p>
+                                2022/02/16
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                《原神》2.5版本「薄樱初绽时」更新通知
+                            </p>
+                            <p>
+                                2022/02/14
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                「流光飞彩」海灯节答谢邮件发放问题处理说明
+                            </p>
+                            <p>
+                                2022/02/09
+                            </p>
+                        </div>
+                    </li>
+                    <p>
+                        查看全部资讯
+                    </p>
+                </ul>
+                <ul class="new_you_bottom">
+                    <li>
+                        <div>
+                            <p>
+                                《原神》「神工天巧」活动即将开启
+                            </p>
+                            <p>
+                                2022/02/28
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                「岩港奇珍行记」网页活动说明
+                            </p>
+                            <p>
+                                2020/11/02
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                《原神》月夕祝颂-万份空月祝福相赠
+                            </p>
+                            <p>
+                                2020/10/01
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                “在尘世的相逢”抖音《原神》公测主播招募
+                            </p>
+                            <p>
+                                2020/09/28
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>
+                                “在尘世的相逢”快手直播《原神》主播招募活动开启
+                            </p>
+                            <p>
+                                2020/09/16
+                            </p>
+                        </div>
+                    </li>
+                    <p>
+                        查看全部资讯
+                    </p>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 国家 -->
+    <section class="city">
+        <ul class="city_ul">
+            <li class="city_li">
+                <div class="city_bg" style="background-image:url(./images/萤火之女.jpg) ;">
+
+                </div>
+                <p class="city_text">
+                    萤火草地
+                </p>
+                <div class="figure" style="background-image:url(./images/blda\ \(7\).png);">
+
+                </div>
+            </li>
+            <li class="city_li">
+                <div class="city_bg" style="background-image:url(./images/城市之都.jpg) ;">
+
+                </div>
+                <p class="city_text">
+                    夜幕都市
+                </p>
+                <div class="figure" style="background-image:url(./images/blda\ \(6\).png);">
+
+                </div>
+            </li>
+            <li class="city_li">
+                <div class="city_bg" style="background-image:url(./images/海的折射.jpg) ;">
+
+                </div>
+                <p class="city_text">
+                    寂静之深
+                </p>
+                <div class="figure" style="background-image:url(./images/blda\ \(3\).png);">
+
+                </div>
+            </li>
+            <li class="city_li">
+                <div class="city_bg" style="background-image:url(./images/每秒五厘米.jpg) ;">
+
+                </div>
+                <p class="city_text">
+                    赤色夕阳
+                </p>
+                <div class="figure" style="background-image:url(./images/blda\ \(2\).png);">
+
+                </div>
+            </li>
+            <li class="city_li_two">
+                <div class="city_bg" style="background-image:url(./images/敬请期待.jpg) ;">
+
+                </div>
+                <p class="city_text_two">
+                    敬请期待
+                </p>
+            </li>
+        </ul>
+    </section>
+    <!-- 右边关注 -->
+    <div class="right_gz">
+        <input type="checkbox" class="right_jt" id="gz">
+        <label for="gz" class="right_jt" id="an1">
+
+        </label>
+        <div class="gz_2">
+            <ul>
+                <li>
+                    <div class="right_top">
+                        <div class="right_top_lanan">
+                            <img src="./images/琳梦.png" width="50px" height="50px">
+                            <nobr>琳梦的倾述馆</nobr>
+                        </div>
+                        <div class="right_top_hr"></div>
+                        <img src="./images/琳梦的倾述馆二维码.jpg">
+                        <p>
+                            关注微信公众号
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="right_weibo right_bj">
+                        <img src="./images/微博关注.png">
+                        <span>官方微博</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="right_tap right_bj">
+                        <img src="./images/微博关注.png">
+                        <span>taptap</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="right_mys right_bj">
+                        <img src="./images/微博关注.png">
+                        <span>官方社区</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer class="footer">
+        <ul class="footer_share">
+            <li class="footer_weibo">
+
+            </li>
+            <li class="footer_weixin">
+
+            </li>
+            <li class="footer_qq">
+
+            </li>
+            <li class="footer_fx">
+                <div class="fx_dizhi">
+                    <p>
+                        分享至
+                    </p>
+                    <ul style="display: flex;justify-content: center;">
+                        <li class="fx_qqkj">
+
+                        </li>
+                        <li class="fx_qq">
+
+                        </li>
+                        <li class="fx_wb">
+
+                        </li>
+                        <li class="fx_tb">
+
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="footer_nr">
+            <div class="footer_nr_content">
+                <div class="footer_logo">
+                    <div class="footer_logo_nr">
+                        <img src="">
+                        <span>
+
+                        </span>
+                        <img src="./images/琳梦.png">
+                    </div>
+                </div>
+                <div class="footer_font">
+                    <div class="font_info">
+                        <div style="color: #fff;margin-bottom: 28px;">
+                            <span style="margin-left: 0px;">
+                                用户协议
+                            </span>
+                            |
+                            <span>
+                                隐私政策
+                            </span>
+                            |
+                            <span>
+                                儿童隐私政策
+                            </span>
+                            |
+                            <span>
+                                自律公约
+                            </span>
+                            |
+                            <span>
+                                家长监护工程
+                            </span>
+                            |
+                            <span>
+                                关于我们
+                            </span>
+                            |
+                            <span>
+                                联系我们
+                            </span>
+                            |
+                            <span>
+                                加入我们
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <p>
+                            健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。
+                        </p>
+                        <p>
+                        <div style="display: flex; ">
+                            <span class="bei_hao">
+                                公网安备：暂无
+                            </span>
+                            <span style="margin-left: 10px; margin-right: 10px;">
+                                |
+                            </span>
+                            <span>
+                                增值电信业务经营许可证：暂无
+                            </span>
+                        </div>
+                        </p>
+                    </div>
+                    <div style="display: flex; ">
+                        <span class="bei_hao">
+                            ICP备：暂无
+                        </span>
+                        <span style="margin-left: 10px; margin-right: 10px;">
+                            |
+                        </span>
+                        <span>
+                            网文：暂无
+                        </span>
+                        <span style="margin-left: 10px; margin-right: 10px;">
+                            |
+                        </span>
+                        <span>
+                            国新出审：暂无
+                        </span>
+                    </div>
+                    <div>
+                        <p>
+                            互联网违法不良信息举报邮箱: 暂无 互联网违法不良信息举报电话: 暂无 （工作时间：不用上班）
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            亲爱的市民朋友，广东警方反诈劝阻电话“96110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            未成年成长关爱热线：暂无，建议无成年人不要上网【bushi】 （服务时间：不用上班）
+                        </p>
+                    </div>
+                    <div style="display: flex;">
+                        <div>
+                            © 2023 琳梦的倾述馆版权所有 | 个人网站，暂无公司
+                        </div>
+                        <div style="margin-left: 20px;">
+                            客服电话：要什么客服
+                        </div>
+                    </div>
+                    <div class="foot_icon">
+                        <div style="background-image: url(./images/实名认证.png);">
+
+                        </div>
+                        <div style="background-image: url(./images/中国.jpg);">
+
+                        </div>
+                        <div style="background-image: url(./images/举报专区.png);">
+
+                        </div>
+                        <div style="background-image: url(./images/经营单位.png);">
+
+                        </div>
+                        <div style="background-image: url(./images/962110.png);">
+
+                        </div>
+                        <div style="background-image: url(./images/营业执照.png);">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height: 35px;background-color: #111;">
+
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+/* 蓝色导航条 */
+
+.header_navs {
+    position: absolute;
+    left: 466px;
+    top: 0px;
+    height: 5px;
+    width: 40px;
+    background-color: rgb(105, 224, 255);
+    transition: all 0.3s;
+}
+
+.header_textPublic:nth-of-type(1):hover~.header_navs {
+    left: 70px;
+}
+
+.header_textPublic:nth-of-type(2):hover~.header_navs {
+    left: 168px;
+}
+
+.header_textPublic:nth-of-type(3):hover~.header_navs {
+    left: 268px;
+}
+
+.header_textPublic:nth-of-type(4):hover~.header_navs {
+    left: 368px;
+}
+
+.header_textPublic:nth-of-type(5):hover~.header_navs {
+    left: 466px;
+}
+
+.header_textPublic:nth-of-type(6):hover~.header_navs {
+    left: 565px;
+}
+
+/* 对应页面的蓝色散光 */
+.header_textChecked {
+    text-shadow: 396px 0 10px #69e0ff, 396px 0 20px #69e0ff, 396px 0 40px #69e0ff;
+    color: #fff;
+}
+
+.header_textPublic:hover {
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    color: #fff;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 254, 221);
+}
+
+.main_couple {
+    position: fixed;
+    z-index: 2;
+    top: 5rem;
+    left: 30rem;
+    width: 750px;
+    height: 750px;
+    background: url(../images/一对情侣.png) no-repeat;
+    background-size: 80%;
+}
+
+.main_back {
+    position: fixed;
+    z-index: 1;
+    top: 10rem;
+    left: 10rem;
+    width: 80vw;
+    height: 60vh;
+    background-color: rgb(195, 166, 166);
+}
+
+.main_h1 {
+    position: fixed;
+    z-index: 5;
+    font-size: 2rem;
+    top: 7rem;
+    left: 45rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.main_choose0 {
+    position: fixed;
+    z-index: 3;
+    top: 20rem;
+    left: 70rem;
+    width: 300px;
+    height: 150px;
+}
+
+.main_choose0_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../images/选项框.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.main_choose0_p0 {
+    text-decoration: none;
+    color: black;
+    z-index: 4;
+    position: fixed;
+    top: 22.5rem;
+    left: 74rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+
+}

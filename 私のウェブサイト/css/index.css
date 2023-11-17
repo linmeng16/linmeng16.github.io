@@ -1,0 +1,396 @@
+/* 蓝色导航条 */
+
+.header_navs {
+    position: absolute;
+    left: 368px;
+    top: 0px;
+    height: 5px;
+    width: 40px;
+    background-color: rgb(105, 224, 255);
+    transition: all 0.3s;
+}
+
+.header_textPublic:nth-of-type(1):hover~.header_navs {
+    left: 70px;
+}
+
+.header_textPublic:nth-of-type(2):hover~.header_navs {
+    left: 168px;
+}
+
+.header_textPublic:nth-of-type(3):hover~.header_navs {
+    left: 268px;
+}
+
+.header_textPublic:nth-of-type(4):hover~.header_navs {
+    left: 368px;
+}
+
+.header_textPublic:nth-of-type(5):hover~.header_navs {
+    left: 466px;
+}
+
+.header_textPublic:nth-of-type(6):hover~.header_navs {
+    left: 565px;
+}
+
+/* 对应页面的蓝色散光 */
+.header_textChecked {
+    text-shadow: 298px 0 10px #69e0ff, 298px 0 20px #69e0ff, 298px 0 40px #69e0ff;
+    color: #fff;
+}
+
+.header_textPublic:hover {
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    color: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 加载 */
+.loading-bg,
+#loading-box .loading-left-bg,
+#loading-box .loading-right-bg {
+    position: fixed;
+    z-index: 1000;
+    width: 50%;
+    height: 100%;
+    background-color: #37474f;
+}
+
+#loading-box .loading-right-bg {
+    right: 0;
+}
+
+#loading-box .spinner-box {
+    position: fixed;
+    z-index: 1001;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -o-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#loading-box .spinner-box .configure-border-1 {
+    position: absolute;
+    padding: 3px;
+    width: 115px;
+    height: 115px;
+    background: #ffab91;
+    -webkit-animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+    -moz-animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+    -o-animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+    -ms-animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+    animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+}
+
+#loading-box .spinner-box .configure-border-2 {
+    left: -115px;
+    padding: 3px;
+    width: 115px;
+    height: 115px;
+    background: #3ff9dc;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+    -moz-animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+    -o-animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+    -ms-animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+    animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+}
+
+#loading-box .spinner-box .loading-word {
+    position: absolute;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+#loading-box .spinner-box .configure-core {
+    width: 100%;
+    height: 100%;
+    background-color: #37474f;
+}
+
+#loading-box.loaded .loading-left-bg {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: translate(-100%, 0);
+    -moz-transform: translate(-100%, 0);
+    -o-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+}
+
+#loading-box.loaded .loading-right-bg {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: translate(100%, 0);
+    -moz-transform: translate(100%, 0);
+    -o-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+}
+
+#loading-box.loaded .spinner-box {
+    display: none;
+}
+
+/* #web_bg {
+    position: fixed;
+    z-index: -999;
+    width: 100%;
+    height: 100%;
+    background: url(https://i.imgloc.com/2023/01/05/WsEUU.jpeg);
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+.video-box {
+    position: fixed;
+    /*进行视频裁剪*/
+    overflow: hidden;
+}
+
+.video-box .video-background {
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    /*保证视频内容始终居中*/
+    /* transform: translate(-50%, -50%); */
+    width: 100%;
+    height: 100%;
+    /*保证视频充满屏幕*/
+    object-fit: cover;
+    min-height: 800px;
+}
+
+.top-bg-black {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.top-bg-cover {
+    z-index: 2;
+    position: absolute;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+
+}
+
+/* 滚动时间轴 */
+.shell {
+    width: 100%;
+    position: relative;
+    padding: 80px 0;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.shell:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(99, 99, 99, 0);
+    content: "";
+}
+
+.header_1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.title {
+    color: #333333;
+    font-size: 46px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.timeline {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 700px;
+    position: relative;
+}
+
+.content-title {
+    font-weight: normal;
+    font-size: 66px;
+    margin: -10px 0 0 0;
+    transition: 0.4s;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: #333333;
+}
+
+.content-desc {
+    margin: 0;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #333333;
+    line-height: 25px;
+}
+
+.timeline:before {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    content: "";
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.item {
+    padding: 40px 0;
+    opacity: 0.3;
+    filter: blur(2px);
+    transition: 0.5s;
+    box-sizing: border-box;
+    width: calc(50% - 40px);
+    display: flex;
+    position: relative;
+    transform: translateY(-80px);
+}
+
+.item:before {
+    /* 设置在伪元素before中的内容  */
+    content: attr(data-text);
+    letter-spacing: 3px;
+    width: 100%;
+    position: absolute;
+    color: #333333;
+    font-size: 13px;
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    top: 70%;
+    margin-top: -5px;
+    padding-left: 15px;
+    opacity: 0;
+    right: calc(-100% - 56px);
+    font: 900 20px '';
+    letter-spacing: 5px;
+}
+
+.item:nth-child(even) {
+    align-self: flex-end;
+}
+
+.item:nth-child(even):before {
+    right: auto;
+    text-align: right;
+    left: calc(-100% - 56px);
+    padding-left: 0;
+    border-left: none;
+    border-right: 2px solid #333333;
+    padding-right: 15px;
+}
+
+.item--active {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+}
+
+.item--active:before {
+    top: 50%;
+    transition: 0.3s all 0.2s;
+    opacity: 1;
+}
+
+.item--active .content-title {
+    margin: -50px 0 20px 0;
+}
+
+.img {
+    max-width: 100%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.subtitle {
+    color: rgba(55, 55, 55, 1);
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin: 10px 0 0 0;
+    font-weight: normal;
+}
+
+.footer {
+    padding: 95px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #999;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 767px) {
+    .item {
+        align-self: baseline !important;
+        width: 100%;
+        padding: 0 30px 150px 80px;
+    }
+
+    .item:before {
+        left: 10px !important;
+        padding: 0 !important;
+        top: 50px;
+        text-align: center !important;
+        width: 60px;
+        border: none !important;
+    }
+
+    .item:last-child {
+        padding-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .timeline:before {
+        left: 40px;
+    }
+}
