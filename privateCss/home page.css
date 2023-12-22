@@ -4,14 +4,15 @@
     height: 100%;
     overflow: hidden;
 }
-
-.video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+@media(min-width:1000px)
+{
+    .video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 }
-
 .video_body_nr {
     display: flex;
     flex-direction: column;
@@ -863,9 +864,37 @@ label {
 .header_textPublic:nth-of-type(6):hover~.header_navs {
     left: 565px;
 }
+
 /* 对应页面的蓝色散光 */
 .header_textPublic:hover,
 .header_textChecked {
     text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
     color: #fff;
 }
+
+
+    .gif {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        bottom: 230px;
+        left: 55px;
+    }
+    .gif_img{
+        width: 100%;
+    }
+
+
+/* @media (max-width:799px) {
+    .gif {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        bottom: 230px;
+        left: 55px;
+    }
+    .gif_img{
+        width: 100%;
+    }
+
+} */
